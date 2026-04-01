@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="timer-bar" aria-label="Wedding countdown" data-countdown-target="2027-05-21T00:00:00+03:00">
+    <div class="timer-bar__inner">
+        <p class="timer-bar__title" data-animate="slide-left">Countdown to wedding</p>
+        <div class="timer-bar__content" role="timer" aria-live="polite" data-stagger="fade-up">
+            <div class="timer-unit" data-animate-child>
+                <span class="timer-value" id="countdown-days">0</span>
+                <span class="timer-label">Days</span>
+            </div>
+            <div class="timer-unit" data-animate-child>
+                <span class="timer-value" id="countdown-hours">0</span>
+                <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-unit" data-animate-child>
+                <span class="timer-value" id="countdown-minutes">0</span>
+                <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-unit" data-animate-child>
+                <span class="timer-value" id="countdown-seconds">0</span>
+                <span class="timer-label">Seconds</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-feature">
+    <div class="home-feature__inner">
+        <div class="home-feature__copy" data-animate="fade-up">
+            <div class="home-feature__heading">
+                <h2 class="home-feature__title site-title" data-animate="slide-left">You are invited!</h2>
+                <img src="{% static 'invitations/assets/img/rings.png' %}" alt="Wedding rings"
+                     class="home-feature__rings" data-animate="float-in" data-animate-delay="180">
+            </div>
+            <p class="home-feature__text" data-animate="fade-up" data-animate-delay="120">We met at our university camp in 2018 â€” we were finishing each otherâ€™s
+                sentences, laughing way too much, and somehow already acting like weâ€™d known each other for years. Also,
+                it turns out that being fed is, in fact, a very effective love language â€” and one of us was completely
+                won over.
+
+                Since then, weâ€™ve been on countless adventures, collected a lot of memories (and probably did a few
+                questionable travel decisions), and eventually built a home together â€” which still feels a bit unreal
+                and very us.
+
+                And now, here we are, starting our next chapter.
+
+                Having you here means everything to us. Some of you witnessed the very beginning, others joined
+                somewhere along the way â€” but all of you are part of this story. We feel so lucky to celebrate it
+                together with you ðŸ¤
+            </p>
+            <p class="home-feature__text mt-4 pt-4" style="font-family:Pinyon Script; font-size:2rem;" data-animate="fade-up" data-animate-delay="220">Join us in
+                celebrating our union.</p>
+        </div>
+        <div class="home-feature__media px-4" data-animate="scale-in" data-animate-delay="180">
+            <img src="{% static 'invitations/assets/img/home_pic.jpg' %}" alt="Wedding home feature image"
+                 class="home-feature__image">
+        </div>
+    </div>
+</section>
+
+<div class="home-cta">
+    <div class="home-cta__inner">
+        <h2 class="home-cta__title site-title" data-animate="slide-left">Ready to celebrate with us?</h2>
+        <a href="{% url 'rsvp' %}" class="home-cta__button" data-rsvp-jump="rsvpStart" data-animate="fade-up" data-animate-delay="160">Let us know!</a>
+    </div>
+</div>
+
+<div class="home-feature" style="background-color:#eae4cc;">
+    <div class="rsvp-questions__intro home-feature__inner">
+        <h1 class="site-title" style="font-weight:200; letter-spacing:-4px" data-animate="slide-left">THE CEREMONY</h1>
+    </div>
+    <div class="px-4 home-feature__inner">
+
+        <div data-animate="scale-in">
+            <img src="{% static 'invitations/assets/img/arch.png' %}" alt="Wedding home feature image"
+                 class="arch-size">
+        </div>
+        <div data-stagger="fade-up">
+            <h2 class="heading_brown" data-animate-child>Date and Time</h2>
+            <p class="subheading_brown" data-animate-child>May 21, 2027</p>
+            <p class="subheading_brown" data-animate-child>14:00 in the afternoon</p>
+
+
+            <h2 class="heading_brown" data-animate-child>Venue</h2>
+            <p class="subheading_brown" data-animate-child>Vilniaus universiteto botanikos sodas</p>
+            <a href="https://maps.app.goo.gl/WXahntDVFGiTfofN8" target="_blank" class="subheading_brown" data-animate-child>KairÄ—nÅ³ g.
+                43</a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="home-feature" style="background-color:#eae4cc;">
+    <div class="rsvp-questions__intro home-feature__inner">
+        <h1 class="site-title" style="font-weight:200; letter-spacing:-10px" data-animate="slide-left">QUESTIONS ?</h1>
+    </div>
+    <div class="px-4 home-feature__inner">
+
+        <div data-stagger="fade-up">
+            <p class="subheading_brown" data-animate-child>Contact us</p>
+            <h2 class="heading_brown" data-animate-child>Email</h2>
+            <a href="mailto:blankas.kizim@gmail.com" class="subheading_brown" data-animate-child>blankas.kizim@gmail.com</a>
+
+
+            <h2 class="heading_brown" data-animate-child>Social</h2>
+            <div class="icon-size" data-animate-child>
+                <a href="https://t.me/+ixwh4HZ6avVlNmZk" target="_blank"><i class="bi bi-telegram contact-icon"></i></a>
+                <a href="https://www.instagram.com/swoshhhhh/" target="_blank"><i class="bi bi-instagram contact-icon"></i></a>
+            </div>
+        </div>
+        <div class="home-feature__media px-4" data-animate="scale-in">
+            <img src="{% static 'invitations/assets/img/contact_photo.jpg' %}" alt="Wedding home feature image"
+                 class="home-feature__image">
+        </div>
+    </div>
+
+</div>
+{% endblock %}

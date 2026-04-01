@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<header class="masthead masthead-rsvp" id="rsvpStart" style="background-image: url('{% static 'invitations/assets/img/rsvp_background.png' %}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-9">
+                <div class="site-heading rsvp-hero">
+                    <h1 class="site-title rsvp-title" style="font-weight:200;" data-animate="hero-up">RSVP</h1>
+                    <span class="subheading wedding-subheading rsvp-subheading" data-animate="hero-up" data-animate-delay="140">RSVP stands for the French phrase "Repondez s'il vous plait," which translates to "please respond"</span>
+                    <form class="rsvp-entry" id="rsvpEntryForm" data-animate="fade-up" data-animate-delay="240">
+                        <label class="rsvp-entry__label" for="rsvpGuestName">Your name</label>
+                        <div class="rsvp-entry__row">
+                            <input class="rsvp-entry__input" id="rsvpGuestName" name="guest_name" type="text" placeholder="Type your name here" required>
+                        </div>
+                        <p class="rsvp-entry__prompt">Will we see you on our wedding day?</p>
+                        <button class="rsvp-entry__button" type="submit">Hell yeah!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="rsvp-questions" id="rsvpQuestions" data-submit-url="{% url 'rsvp_submit' %}" hidden>
+    <div class="rsvp-questions__inner">
+        <div class="rsvp-questions__intro">
+            <h1 class="site-title rsvp-title" style="font-weight:200;" data-animate="slide-left">WE HAVE QUESTIONS</h1>
+            <p class="rsvp-questions__guest" style="font-family:Cormorant Garamond; font-size:2rem;" id="rsvpGuestGreeting"></p>
+        </div>
+
+        <form class="rsvp-wizard" id="rsvpWizardForm">
+            <div class="rsvp-stage" id="rsvpQuestionStage">
+                <div class="rsvp-card" id="rsvpQuestionCard" data-animate="fade-up">
+                    <p class="rsvp-card__step" id="rsvpQuestionStep">Question 1</p>
+                    <h3 class="rsvp-card__question" id="rsvpQuestionText">Are you going with us to the accommodation and party?</h3>
+                    <div class="rsvp-card__options" id="rsvpQuestionOptions"></div>
+                    <div class="rsvp-input-group" id="rsvpTextEntry" hidden>
+                        <input class="rsvp-text-input" id="rsvpTextInput" type="text" placeholder="">
+                        <div class="rsvp-input-actions" id="rsvpTextActions"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rsvp-wizard__actions">
+                <button class="rsvp-secondary" id="rsvpBackButton" type="button" hidden>Back</button>
+                <button class="rsvp-submit" id="rsvpSubmitButton" type="submit" hidden>Submit everything</button>
+                <button class="rsvp-secondary" id="rsvpAnotherButton" type="button" hidden>Add another person</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<div class="photo-banner">
+    <div class="px-4 home-feature__inner">
+     <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px;" data-stagger="fade-up">
+            <p class="subheading_brown text-center mt-4" style="font-weight:800;" data-animate-child>Get to know more about style & schedule</p>
+         <a href="{% url 'about' %}" class="btn brown-button" data-animate-child>Find out more details</a>
+         <a href="https://t.me/+ixwh4HZ6avVlNmZk" class="btn brown-button mb-4" data-animate-child>Join Telegram group</a>
+
+        </div>
+        <div class="more-banner" data-animate="scale-in">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
