@@ -283,60 +283,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const rsvpAnotherButton = document.getElementById('rsvpAnotherButton');
     const rsvpGuestName = document.getElementById('rsvpGuestName');
     const rsvpSubmitUrl = rsvpQuestionsSection?.dataset.submitUrl;
+    const rsvpTranslationsNode = document.getElementById('rsvp-translations');
+    const rsvpTranslations = rsvpTranslationsNode ? JSON.parse(rsvpTranslationsNode.textContent) : {};
 
-    const rsvpQuestions = [
-        {
-            key: 'attendance',
-            question: 'Are you going with us to the accommodation and party?',
-            options: [
-                { label: 'Yes', value: 'yes_party' },
-                { label: 'No, only the ceremony', value: 'no_ceremony_only' },
-            ],
-        },
-        {
-            key: 'driving',
-            question: 'Will you be driving?',
-            options: [
-                { label: 'Yes, but I cannot take anyone with me', value: 'yes_no_space' },
-                { label: 'Yes, and I can take someone else too', value: 'yes_can_take_someone' },
-                { label: 'No, I need a lift', value: 'no_need_lift' },
-            ],
-        },
-        {
-            key: 'food',
-            question: 'What food do you prefer?',
-            options: [
-                { label: 'Chicken', value: 'chicken' },
-                { label: 'Beef', value: 'beef' },
-                { label: 'Fish', value: 'fish' },
-                { label: 'Vegetarian', value: 'vegetarian' },
-            ],
-        },
-        {
-            key: 'alcohol',
-            question: 'What alcohol do you drink, and about how much?',
-            type: 'text',
-            placeholder: 'Example: Red wine, 2 glasses',
-            shortcuts: [
-                { label: "I don't drink alcohol", value: "I don't drink alcohol" },
-            ],
-        },
-        {
-            key: 'soft_drinks',
-            question: 'What soft drinks would you like available, and how much?',
-            type: 'text',
-            placeholder: 'Example: Coke Zero, 2 cans',
-            shortcuts: [
-                { label: 'No soft drinks for me', value: 'No soft drinks for me' },
-            ],
-        },
-        {
-            key: 'music',
-            question: 'What songs would you like us to play?',
-            type: 'music',
-            placeholder: 'Type a song title',
-        },
-    ];
+    const rsvpQuestions = Array.isArray(rsvpTranslations.questions) ? rsvpTranslations.questions : [];
 
     const rsvpStorageKey = 'wedding_rsvp_draft';
     const rsvpTransitionMs = 520;
@@ -422,9 +372,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (rsvpGuestGreeting) {
             if (rsvpState.submitted) {
-                rsvpGuestGreeting.textContent = `${rsvpState.name}, your RSVP is saved.`;
+                rsvpGuestGreeting.textContent = (rsvpTranslations.saved_label || '%(name)s, your RSVP is saved.').replace('%(name)s', rsvpState.name);
             } else {
-                rsvpGuestGreeting.textContent = rsvpState.name ? `Guest: ${rsvpState.name}` : '';
+                rsvpGuestGreeting.textContent = rsvpState.name ? (rsvpTranslations.guest_label || 'Guest: %(name)s').replace('%(name)s', rsvpState.name) : '';
             }
         }
 
@@ -443,7 +393,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         rsvpState.currentIndex = Math.min(rsvpState.currentIndex, activeQuestions.length - 1);
         const currentQuestion = activeQuestions[rsvpState.currentIndex];
-        rsvpQuestionStep.textContent = `Question ${rsvpState.currentIndex + 1}`;
+        rsvpQuestionStep.textContent = (rsvpTranslations.question_label || 'Question %(number)s').replace('%(number)s', String(rsvpState.currentIndex + 1));
         rsvpQuestionText.textContent = currentQuestion.question;
 
         rsvpQuestionOptions.innerHTML = '';
@@ -485,7 +435,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     const addSongButton = document.createElement('button');
                     addSongButton.type = 'button';
                     addSongButton.className = 'rsvp-option';
-                    addSongButton.textContent = 'Add song';
+                    addSongButton.textContent = rsvpTranslations.add_song || 'Add song';
                     addSongButton.addEventListener('click', (event) => {
                         event.preventDefault();
                         const song = rsvpTextInput.value.trim();
@@ -504,7 +454,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     const nextButton = document.createElement('button');
                     nextButton.type = 'button';
                     nextButton.className = 'rsvp-option';
-                    nextButton.textContent = 'Next';
+                    nextButton.textContent = rsvpTranslations.next || 'Next';
                     nextButton.addEventListener('click', () => {
                         const existingSongs = Array.isArray(rsvpState.musicDraft) ? [...rsvpState.musicDraft] : [];
                         const typedSong = rsvpTextInput.value.trim();
@@ -513,7 +463,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         }
 
                         if (existingSongs.length === 0) {
-                            existingSongs.push('No music requests');
+                            existingSongs.push(rsvpTranslations.no_music_requests || 'No music requests');
                         }
 
                         rsvpState.musicDraft = existingSongs;
@@ -544,7 +494,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     const nextButton = document.createElement('button');
                     nextButton.type = 'button';
                     nextButton.className = 'rsvp-option';
-                    nextButton.textContent = 'Next';
+                    nextButton.textContent = rsvpTranslations.next || 'Next';
                     nextButton.addEventListener('click', () => {
                         const value = rsvpTextInput.value.trim();
                         if (!value) {
@@ -702,7 +652,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
 
             rsvpSubmitButton.disabled = true;
-            rsvpSubmitButton.textContent = 'Submitting...';
+            rsvpSubmitButton.textContent = rsvpTranslations.submitting || 'Submitting...';
 
             try {
                 const response = await window.fetch(rsvpSubmitUrl, {
@@ -731,32 +681,31 @@ window.addEventListener('DOMContentLoaded', () => {
                 renderRsvpQuestion('right');
             } catch {
                 rsvpSubmitButton.disabled = false;
-                rsvpSubmitButton.textContent = 'Submit everything';
+                rsvpSubmitButton.textContent = rsvpTranslations.submit_everything || 'Submit everything';
                 if (rsvpGuestGreeting) {
-                    rsvpGuestGreeting.textContent = 'There was a problem saving your RSVP. Please try again.';
+                    rsvpGuestGreeting.textContent = rsvpTranslations.submit_error || 'There was a problem saving your RSVP. Please try again.';
                 }
                 return;
             }
 
             rsvpSubmitButton.disabled = false;
-            rsvpSubmitButton.textContent = 'Submit everything';
+            rsvpSubmitButton.textContent = rsvpTranslations.submit_everything || 'Submit everything';
         });
     }
 });
 
-async function CopyButton() {
-    try {
-        await navigator.clipboard.writeText("9 Medai, Padūkštai, 21367 Lithuania");
-        alert("Copied!");
-    } catch (error) {
-        alert("Copy failed");
-        console.error(error);
-    }
-}
 window.CopyButton = async function () {
     const text = "9 Medai, Padukstai, 21367 Lithuania";
     const feedback = document.getElementById("copy-feedback");
     const icon = document.querySelector(".bi-clipboard-heart-fill");
+
+    if (!feedback) {
+        console.error("Feedback element not found!");
+        return;
+    }
+
+    const successLabel = "Copied";
+    const failLabel = "Failed";
 
     const positionFeedback = () => {
         if (!feedback || !icon) {
@@ -773,9 +722,26 @@ window.CopyButton = async function () {
             return;
         }
 
+        // Clear any existing content first
+        while (feedback.firstChild) {
+            feedback.removeChild(feedback.firstChild);
+        }
+
+        // Add text node
+        const textNode = document.createTextNode(message);
+        feedback.appendChild(textNode);
+
         positionFeedback();
-        feedback.textContent = message;
+
+        // Ensure visibility
+        feedback.style.visibility = 'visible';
+        feedback.style.opacity = '0';
+
+        // Trigger reflow to ensure changes are applied
+        void feedback.offsetHeight;
+
         feedback.classList.add("is-visible");
+
         window.addEventListener("scroll", positionFeedback, { passive: true });
         window.addEventListener("resize", positionFeedback);
         window.clearTimeout(window.copyFeedbackTimeout);
@@ -803,9 +769,9 @@ window.CopyButton = async function () {
             document.body.removeChild(textArea);
         }
 
-        showFeedback("Copied");
+        showFeedback(successLabel);
     } catch (error) {
         console.error("Copy failed:", error);
-        showFeedback("Failed");
+        showFeedback(failLabel);
     }
 };

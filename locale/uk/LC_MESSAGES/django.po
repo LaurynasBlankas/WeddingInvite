@@ -1,0 +1,602 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WeddingInvite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-01 21:59+0300\n"
+"PO-Revision-Date: 2026-04-01 22:00+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.8\n"
+
+#: .\invitations\templates\RSVP.html:10 .\invitations\templates\navbar.html:19
+msgid "RSVP"
+msgstr "RSVP"
+
+#: .\invitations\templates\RSVP.html:11
+msgid ""
+"\n"
+"RSVP stands for the French phrase \"Repondez s'il vous plait,\" which "
+"translates to \"please respond\"\n"
+msgstr ""
+"\n"
+"RSVP походить від французького вислову \"Repondez s'il vous plait\", що "
+"означає \"будь ласка, дайте відповідь\"\n"
+
+#: .\invitations\templates\RSVP.html:15
+msgid "Your name"
+msgstr "Ваше ім'я"
+
+#: .\invitations\templates\RSVP.html:17
+msgid "Type your name here"
+msgstr "Введіть ваше ім'я"
+
+#: .\invitations\templates\RSVP.html:19
+msgid "Will we see you on our wedding day?"
+msgstr "Побачимося з вами в день весілля?"
+
+#: .\invitations\templates\RSVP.html:20
+msgid "Hell yeah!"
+msgstr "Авжеж!"
+
+#: .\invitations\templates\RSVP.html:31
+msgid "WE HAVE QUESTIONS"
+msgstr "У НАС Є ЗАПИТАННЯ"
+
+#: .\invitations\templates\RSVP.html:38
+msgid "Question 1"
+msgstr "Питання 1"
+
+#: .\invitations\templates\RSVP.html:39 .\invitations\views.py:65
+msgid "Are you going with us to the accommodation and party?"
+msgstr "Ви їдете з нами до місця проживання та на вечірку?"
+
+#: .\invitations\templates\RSVP.html:48
+msgid "Back"
+msgstr "Назад"
+
+#: .\invitations\templates\RSVP.html:49 .\invitations\views.py:60
+msgid "Submit everything"
+msgstr "Надіслати все"
+
+#: .\invitations\templates\RSVP.html:50
+msgid "Add another person"
+msgstr "Додати ще одну людину"
+
+#: .\invitations\templates\RSVP.html:59
+msgid "Get to know more about style & schedule"
+msgstr "Дізнайтеся більше про стиль і розклад"
+
+#: .\invitations\templates\RSVP.html:60
+msgid "Find out more details"
+msgstr "Дізнатися більше"
+
+#: .\invitations\templates\RSVP.html:61
+msgid "Join Telegram group"
+msgstr "Приєднатися до Telegram-групи"
+
+#: .\invitations\templates\about.html:8
+msgid "WEDDING STYLE"
+msgstr "СТИЛЬ ВЕСІЛЛЯ"
+
+#: .\invitations\templates\about.html:18
+msgid "INSPO FOR THE LADIES"
+msgstr "НАТХНЕННЯ ДЛЯ ДІВЧАТ"
+
+#: .\invitations\templates\about.html:31 .\invitations\templates\about.html:48
+msgid "Note from Darry:"
+msgstr "Примітка від Даррі:"
+
+#: .\invitations\templates\about.html:40
+msgid "INSPO FOR THE GENTLEMEN"
+msgstr "ІДЕЇ ДЛЯ ЧОЛОВІКІВ"
+
+#: .\invitations\templates\about.html:60 .\invitations\templates\home.html:55
+msgid "THE CEREMONY"
+msgstr "ЦЕРЕМОНІЯ"
+
+#: .\invitations\templates\about.html:64 .\invitations\templates\home.html:59
+msgid "Wedding ceremony image"
+msgstr "Зображення церемонії"
+
+#: .\invitations\templates\about.html:68 .\invitations\templates\home.html:63
+msgid "Date and Time"
+msgstr "Дата і час"
+
+#: .\invitations\templates\about.html:69 .\invitations\templates\about.html:85
+#: .\invitations\templates\home.html:64
+msgid "May 21, 2027"
+msgstr "21 травня 2027"
+
+#: .\invitations\templates\about.html:70 .\invitations\templates\home.html:65
+msgid "14:00 in the afternoon"
+msgstr "14:00 дня"
+
+#: .\invitations\templates\about.html:71 .\invitations\templates\home.html:66
+msgid "Venue"
+msgstr "Місце"
+
+#: .\invitations\templates\about.html:72 .\invitations\templates\home.html:67
+msgid "Vilniaus universiteto botanikos sodas"
+msgstr "Ботанічний сад Вільнюського університету"
+
+#: .\invitations\templates\about.html:74 .\invitations\templates\home.html:68
+msgid "Kairenu g. 43"
+msgstr "Kairenu g. 43"
+
+#: .\invitations\templates\about.html:81
+msgid "THE PROGRAM"
+msgstr "ПРОГРАМА"
+
+#: .\invitations\templates\about.html:87
+msgid "Wedding about feature image"
+msgstr "Зображення розділу про весілля"
+
+#: .\invitations\templates\about.html:91
+msgid "Arrivals"
+msgstr "Прибуття гостей"
+
+#: .\invitations\templates\about.html:94 .\invitations\templates\navbar.html:28
+msgid "Ceremony"
+msgstr "Церемонія"
+
+#: .\invitations\templates\about.html:98
+msgid "Cocktail Hour"
+msgstr "Коктейльна година"
+
+#: .\invitations\templates\about.html:101
+msgid "Going to Sodyba"
+msgstr "Виїзд до садиби"
+
+#: .\invitations\templates\about.html:103
+msgid "Reception"
+msgstr "Святкування"
+
+#: .\invitations\templates\about.html:106
+msgid "Dinner"
+msgstr "Вечеря"
+
+#: .\invitations\templates\about.html:108
+msgid "After Party"
+msgstr "Афтерпаті"
+
+#: .\invitations\templates\about.html:115
+msgid "THE SODYBA"
+msgstr "САДИБА"
+
+#: .\invitations\templates\about.html:119
+msgid "May 21 - May 23"
+msgstr "21 травня - 23 травня"
+
+#: .\invitations\templates\about.html:121
+msgid "Wedding accommodation image"
+msgstr "Зображення проживання"
+
+#: .\invitations\templates\about.html:124
+msgid "9 Medai, Padukstai, 21367 Lithuania"
+msgstr "9 Medai, Padukstai, 21367 Литва"
+
+#: .\invitations\templates\about.html:144
+msgid "What should I take?"
+msgstr "Що мені взяти з собою?"
+
+#: .\invitations\templates\about.html:146
+msgid "Can we take photos during the wedding?"
+msgstr "Чи можна фотографувати під час весілля?"
+
+#: .\invitations\templates\about.html:148
+msgid "Kids?"
+msgstr "Діти?"
+
+#: .\invitations\templates\about.html:155 .\invitations\templates\home.html:75
+msgid "QUESTIONS ?"
+msgstr "Є питання?"
+
+#: .\invitations\templates\about.html:159 .\invitations\templates\home.html:79
+msgid "Contact us"
+msgstr "Зв'яжіться з нами"
+
+#: .\invitations\templates\about.html:160 .\invitations\templates\home.html:80
+msgid "Email"
+msgstr "Ел. пошта"
+
+#: .\invitations\templates\about.html:162 .\invitations\templates\home.html:82
+msgid "Social"
+msgstr "Соцмережі"
+
+#: .\invitations\templates\about.html:170 .\invitations\templates\home.html:89
+msgid "Contact photo"
+msgstr "Контактне фото"
+
+#: .\invitations\templates\base.html:10
+msgid "Wedding Invitation"
+msgstr "Весільне запрошення"
+
+#: .\invitations\templates\base.html:35
+msgid "are getting married"
+msgstr "одружуються"
+
+#: .\invitations\templates\home.html:4
+msgid "Wedding countdown"
+msgstr "Відлік до весілля"
+
+#: .\invitations\templates\home.html:6
+msgid "Countdown to wedding"
+msgstr "Відлік до весілля"
+
+#: .\invitations\templates\home.html:10
+msgid "Days"
+msgstr "Дні"
+
+#: .\invitations\templates\home.html:14
+msgid "Hours"
+msgstr "Години"
+
+#: .\invitations\templates\home.html:18
+msgid "Minutes"
+msgstr "Хвилини"
+
+#: .\invitations\templates\home.html:22
+msgid "Seconds"
+msgstr "Секунди"
+
+#: .\invitations\templates\home.html:32
+msgid "You are invited!"
+msgstr "Вас запрошено!"
+
+#: .\invitations\templates\home.html:33
+msgid "Wedding rings"
+msgstr "Весільні каблучки"
+
+#: .\invitations\templates\home.html:37
+msgid "Join us in celebrating our union"
+msgstr "Приєднайтесь до святкування нашого весілля"
+
+#: .\invitations\templates\home.html:40
+msgid "Wedding home feature image"
+msgstr "Головне фото весілля"
+
+#: .\invitations\templates\home.html:48
+msgid "Ready to celebrate with us?"
+msgstr "Готові святкувати разом з нами?"
+
+#: .\invitations\templates\home.html:49
+msgid "Let us know!"
+msgstr "Дайте нам знати!"
+
+#: .\invitations\templates\navbar.html:5
+msgid "Home"
+msgstr "Головна"
+
+#: .\invitations\templates\navbar.html:7
+msgid "Toggle navigation"
+msgstr "Перемкнути навігацію"
+
+#: .\invitations\templates\navbar.html:8
+msgid "Menu"
+msgstr "Меню"
+
+#: .\invitations\templates\navbar.html:16
+msgid "For Guests"
+msgstr "Для гостей"
+
+#: .\invitations\templates\navbar.html:24
+msgid "About"
+msgstr "Інформація"
+
+#: .\invitations\templates\navbar.html:27
+msgid "Wedding Style"
+msgstr "Стиль весілля"
+
+#: .\invitations\templates\navbar.html:29
+msgid "Timeline"
+msgstr "Таймлайн"
+
+#: .\invitations\templates\navbar.html:30
+msgid "Accommodation"
+msgstr "Проживання"
+
+#: .\invitations\views.py:53
+#, python-format
+msgid "Guest: %(name)s"
+msgstr "Гість: %(name)s"
+
+#: .\invitations\views.py:54
+#, python-format
+msgid "%(name)s, your RSVP is saved."
+msgstr "%(name)s, ваше підтвердження збережено."
+
+#: .\invitations\views.py:55
+#, python-format
+msgid "Question %(number)s"
+msgstr "Питання %(number)s"
+
+#: .\invitations\views.py:56
+msgid "Add song"
+msgstr "Додати пісню"
+
+#: .\invitations\views.py:57
+msgid "Next"
+msgstr "Далі"
+
+#: .\invitations\views.py:58
+msgid "No music requests"
+msgstr "Без музичних побажань"
+
+#: .\invitations\views.py:59
+msgid "Submitting..."
+msgstr "Надсилання..."
+
+#: .\invitations\views.py:61
+msgid "There was a problem saving your RSVP. Please try again."
+msgstr ""
+"Виникла проблема під час збереження вашого підтвердження. Спробуйте ще раз."
+
+#: .\invitations\views.py:67
+msgid "Yes"
+msgstr "Так"
+
+#: .\invitations\views.py:68
+msgid "No, only the ceremony"
+msgstr "Ні, лише церемонія"
+
+#: .\invitations\views.py:73
+msgid "Will you be driving?"
+msgstr "Ви будете за кермом?"
+
+#: .\invitations\views.py:75
+msgid "Yes, but I cannot take anyone with me"
+msgstr "Так, але я не можу нікого підвезти"
+
+#: .\invitations\views.py:76
+msgid "Yes, and I can take someone else too"
+msgstr "Так, і я можу когось ще підвезти"
+
+#: .\invitations\views.py:77
+msgid "No, I need a lift"
+msgstr "Ні, мене потрібно підвезти"
+
+#: .\invitations\views.py:82
+msgid "What food do you prefer?"
+msgstr "Яку їжу ви обираєте?"
+
+#: .\invitations\views.py:84
+msgid "Chicken"
+msgstr "Курка"
+
+#: .\invitations\views.py:85
+msgid "Beef"
+msgstr "Яловичина"
+
+#: .\invitations\views.py:86
+msgid "Fish"
+msgstr "Риба"
+
+#: .\invitations\views.py:87
+msgid "Vegetarian"
+msgstr "Вегетаріанське"
+
+#: .\invitations\views.py:92
+msgid "What alcohol do you drink, and about how much?"
+msgstr "Який алкоголь ви п'єте і приблизно скільки?"
+
+#: .\invitations\views.py:94
+msgid "Example: Red wine, 2 glasses"
+msgstr "Наприклад: червоне вино, 2 келихи"
+
+#: .\invitations\views.py:96
+msgid "I don't drink alcohol"
+msgstr "Я не п'ю алкоголь"
+
+#: .\invitations\views.py:101
+msgid "What soft drinks would you like available, and how much?"
+msgstr "Які безалкогольні напої ви хотіли б бачити, і скільки?"
+
+#: .\invitations\views.py:103
+msgid "Example: Coke Zero, 2 cans"
+msgstr "Наприклад: Coke Zero, 2 банки"
+
+#: .\invitations\views.py:105
+msgid "No soft drinks for me"
+msgstr "Мені безалкогольні напої не потрібні"
+
+#: .\invitations\views.py:110
+msgid "What songs would you like us to play?"
+msgstr "Які пісні ви хотіли б почути?"
+
+#: .\invitations\views.py:112
+msgid "Type a song title"
+msgstr "Введіть назву пісні"
+
+#: .\invitations\views.py:179
+msgid ""
+"I know you will not go all out, and that's okay. Just maybe a little flower "
+"somewhere?"
+msgstr ""
+"Я знаю, що ви не будете забагато чипуритися, але може хоч кудись квіточку "
+"впишите в свій образ?"
+
+#: .\invitations\views.py:180
+msgid ""
+"We will be renting the place for 2 nights - so on the second night we decide "
+"what we wish to do - but mostly clean up and recover. Fishing is allowed."
+msgstr ""
+"Ми орендуємо це місце на 2 ночі - тож на другу ніч вже вирішимо, що саме "
+"робити, але здебільшого будемо відпочивати та прибирати. Риболовля дозволена."
+
+#: .\invitations\views.py:181
+msgid ""
+"If you are going with us to accommodation, take the outfit for the second "
+"day, something to sleep in, and swimsuit if you would want to chill in "
+"kubilas in the evening. Any fun table games are appreciated too."
+msgstr ""
+"Якщо ви їдете з нами до місця проживання, візьміть одяг на другий день, щось "
+"для сну та купальник, якщо захочете розслабитися у чані ввечері. Також "
+"будемо раді будь-яким веселим настільним іграм."
+
+#: .\invitations\views.py:182
+msgid ""
+"We would love to hear from you on or before January 20. Please RSVP through "
+"this website or get in touch with us."
+msgstr ""
+"Ми будемо раді отримати вашу відповідь до 20 січня включно. Будь ласка, "
+"підтвердьте участь через цей сайт або зв'яжіться з нами."
+
+#: .\invitations\views.py:183
+msgid ""
+"We will be having an unplugged ceremony, so we kindly request that phones "
+"and cameras be kept out of sight until after the ceremony is concluded. You "
+"are welcome to take photos during the cocktail hour, reception, and after "
+"party."
+msgstr ""
+"У нас буде церемонія без телефонів, тому ми просимо сховати телефони та "
+"камери до завершення церемонії. Після цього ви можете фотографувати під час "
+"коктейльної години, святкування та афтерпаті."
+
+#: .\invitations\views.py:184
+msgid ""
+"No kids - the place will not be suitable for the kids and we will swear and "
+"drink a lot. If you get a baby - please leave them at the comfort of their "
+"home and have a party for a bit."
+msgstr ""
+"Без дітей - це місце не дуже підходить для дітей, а ми будемо багато лаятися "
+"та пити. Якщо у вас є малюк - будь ласка, залиште його вдома в комфорті та "
+"трохи відпочиньте на вечірці."
+
+#, fuzzy
+#~| msgid ""
+#~| "We'd love our wedding to feel like a soft, romantic fairytale - think "
+#~| "flowing silhouettes, natural textures, and a touch of playful elegance.\n"
+#~| "For outfits, we're imagining longer dresses in earthy, floral-inspired "
+#~| "tones: soft greens, warm browns, dusty pinks, muted blues, and other "
+#~| "gentle, nature-inspired shades. Light, airy fabrics and relaxed fits are "
+#~| "very much in the spirit.\n"
+#~| "\n"
+#~| "Feel free to have fun with accessories! Hair pieces, delicate jewelry, "
+#~| "scarves, or anything a little whimsical are more than welcome - this is "
+#~| "your chance to add a personal, magical touch.\n"
+#~| "The only thing we kindly ask is to avoid very bright or bold colors "
+#~| "(such as strong reds, bright greens, or vibrant yellows), so we can keep "
+#~| "the overall look cohesive and dreamy.\n"
+#~| "\n"
+#~| "If it helps, picture something between a garden fairytale and a period "
+#~| "drama - soft, romantic, and just a little bit enchanting."
+#~ msgid ""
+#~ "We'd love our wedding to feel like a soft, romantic fairytale - think "
+#~ "flowing silhouettes, natural textures, and a touch of playful elegance. "
+#~ "For outfits, we're imagining longer dresses in earthy, floral-inspired "
+#~ "tones: soft greens, warm browns, dusty pinks, muted blues, and other "
+#~ "gentle, nature-inspired shades. Light, airy fabrics and relaxed fits are "
+#~ "very much in the spirit. Feel free to have fun with accessories! Hair "
+#~ "pieces, delicate jewelry, scarves, or anything a little whimsical are "
+#~ "more than welcome - this is your chance to add a personal, magical touch. "
+#~ "The only thing we kindly ask is to avoid very bright or bold colors (such "
+#~ "as strong reds, bright greens, or vibrant yellows), so we can keep the "
+#~ "overall look cohesive and dreamy. If it helps, picture something between "
+#~ "a garden fairytale and a period drama - soft, romantic, and just a little "
+#~ "bit enchanting."
+#~ msgstr ""
+#~ "Ми дуже хочемо, щоб наше весілля відчувалося як ніжна романтична казка - "
+#~ "уявіть собі легкі силуети, природні текстури та трішки грайливої "
+#~ "елегантності.\n"
+#~ "Щодо вбрання, ми бачимо довші сукні в землистих, квіткових відтінках: "
+#~ "м'які зелені, теплі коричневі, припилені рожеві, приглушені блакитні та "
+#~ "інші ніжні природні кольори. Легкі тканини та вільні фасони дуже пасують "
+#~ "настрою.\n"
+#~ "\n"
+#~ "Сміливо грайтеся з аксесуарами! Прикраси для волосся, делікатні прикраси, "
+#~ "шарфи чи будь-що трохи казкове тільки вітається - це ваш шанс додати "
+#~ "особистий і чарівний акцент.\n"
+#~ "Єдине, про що ми просимо, - уникати дуже яскравих або надто насичених "
+#~ "кольорів (наприклад, сильних червоних, яскраво-зелених чи насичено-"
+#~ "жовтих), щоб загальний вигляд залишався цілісним і мрійливим.\n"
+#~ "\n"
+#~ "Якщо це допоможе, уявіть щось між садовою казкою та історичною драмою - "
+#~ "ніжно, романтично і трохи чарівно."
+
+#, fuzzy
+#~| msgid ""
+#~| "Please do not be afraid to go all out. It would be such a cool party, "
+#~| "wouldn't it?\n"
+#~| "Just don't go bankrupt."
+#~ msgid ""
+#~ "Please do not be afraid to go all out. It would be such a cool party, "
+#~ "wouldn't it? Just don't go bankrupt."
+#~ msgstr ""
+#~ "Будь ласка, не бійтеся викластися на повну. Це ж була б неймовірно "
+#~ "стильна вечірка, правда?\n"
+#~ "Тільки не збанкрутуйте."
+
+#~ msgid "Copied"
+#~ msgstr "Скопійовано"
+
+#~ msgid "Failed"
+#~ msgstr "Помилка"
+
+#~ msgid "Q&A"
+#~ msgstr "Питання та відповіді"
+
+#~ msgid "When do I need to RSVP?"
+#~ msgstr "До коли потрібно підтвердити участь?"
+
+#, fuzzy
+#~| msgid ""
+#~| "We met at our university camp in 2018 - we were finishing each other's\n"
+#~| "sentences, laughing way too much, and somehow already acting like we'd "
+#~| "known each other for years. Also,\n"
+#~| "it turns out that being fed is, in fact, a very effective love language "
+#~| "- and one of us was completely\n"
+#~| "won over.\n"
+#~| "\n"
+#~| "Since then, we've been on countless adventures, collected a lot of "
+#~| "memories (and probably did a few\n"
+#~| "questionable travel decisions), and eventually built a home together - "
+#~| "which still feels a bit unreal\n"
+#~| "and very us.\n"
+#~| "\n"
+#~| "And now, here we are, starting our next chapter.\n"
+#~| "\n"
+#~| "Having you here means everything to us. Some of you witnessed the very "
+#~| "beginning, others joined\n"
+#~| "somewhere along the way - but all of you are part of this story. We feel "
+#~| "so lucky to celebrate it\n"
+#~| "together with you."
+#~ msgid ""
+#~ "We met at our university camp in 2018 - we were finishing each other's "
+#~ "sentences, laughing way too much, and somehow already acting like we'd "
+#~ "known each other for years. Also, it turns out that being fed is, in "
+#~ "fact, a very effective love language - and one of us was completely won "
+#~ "over. Since then, we've been on countless adventures, collected a lot of "
+#~ "memories (and probably did a few questionable travel decisions), and "
+#~ "eventually built a home together - which still feels a bit unreal and "
+#~ "very us. And now, here we are, starting our next chapter. Having you here "
+#~ "means everything to us. Some of you witnessed the very beginning, others "
+#~ "joined somewhere along the way - but all of you are part of this story. "
+#~ "We feel so lucky to celebrate it together with you."
+#~ msgstr ""
+#~ "Ми познайомилися в університетському таборі у 2018 році - ми закінчували "
+#~ "думки одне одного,\n"
+#~ "сміялися надто багато і вже поводилися так, ніби зналися багато років. І "
+#~ "ще,\n"
+#~ "виявилося, що смачна їжа - це справді дуже сильна мова кохання, і одного "
+#~ "з нас це остаточно\n"
+#~ "підкорило.\n"
+#~ "\n"
+#~ "Відтоді ми пережили безліч пригод, зібрали багато спогадів (і, можливо, "
+#~ "ухвалили кілька\n"
+#~ "сумнівних рішень щодо подорожей), а згодом побудували спільний дім - що "
+#~ "досі здається трохи нереальним\n"
+#~ "і дуже нашим.\n"
+#~ "\n"
+#~ "І ось ми тут, починаємо нашу нову главу.\n"
+#~ "\n"
+#~ "Ваша присутність означає для нас дуже багато. Хтось із вас був поруч із "
+#~ "самого початку, хтось приєднався\n"
+#~ "пізніше - але всі ви є частиною цієї історії. Нам неймовірно пощастило "
+#~ "святкувати її\n"
+#~ "разом із вами."

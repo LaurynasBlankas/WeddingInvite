@@ -1936,6 +1936,28 @@ progress {
   }
 }
 @media (max-width: 767.98px) {
+  .about-banner {
+    padding: 2rem 1rem 2.25rem;
+    min-height: auto;
+  }
+
+  .about-banner__title {
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .about-banner__text {
+    max-width: 100%;
+    line-height: 1.75;
+  }
+
+  .about-banner-footer {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background-position: center top;
+    background-size: contain;
+    background-color: transparent;
+  }
   .table-responsive-md {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -3732,6 +3754,7 @@ textarea.form-control-lg {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navbar-toggler {
@@ -5127,7 +5150,7 @@ textarea.form-control-lg {
   flex-shrink: 0;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
+    justify-content: center;
   padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * 0.5);
   background-color: var(--bs-modal-footer-bg);
   border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
@@ -10618,9 +10641,6 @@ blockquote {
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
   color: #eae4cc;
 }
-#mainNav .navbar-nav-even {
-  gap: 1rem;
-}
 @media (max-width: 991.98px) {
   #mainNav {
     transition: background-color 0.2s ease;
@@ -10636,14 +10656,16 @@ blockquote {
     padding-bottom: 1.25rem;
   }
   #mainNav .navbar-nav-even {
-    align-items: stretch !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
   #mainNav .navbar-nav-even > .nav-item {
     width: 100%;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
     display: block;
-    text-align: left;
+
   }
   #mainNav .dropdown-menu {
     position: static;
@@ -10692,11 +10714,12 @@ blockquote {
   #mainNav .navbar-nav-even {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start !important;
+    gap: 2rem;
   }
   #mainNav .navbar-nav-even > .nav-item {
-    flex: 1 1 0;
+    flex: 0 0 auto;
     display: flex;
     justify-content: center;
     align-self: flex-start;
@@ -10704,6 +10727,13 @@ blockquote {
   #mainNav .navbar-nav-even > .nav-item.dropdown {
     flex-direction: column;
     align-items: center;
+  }
+  #mainNav .navbar-nav-even > .nav-item:nth-child(1) {
+    margin-right: auto;
+  }
+  #mainNav .navbar-nav-even > .nav-item:nth-child(2),
+  #mainNav .navbar-nav-even > .nav-item:nth-child(3) {
+    margin-left: 1rem;
   }
   #mainNav .navbar-nav-even > .nav-spacer {
     pointer-events: none;
@@ -10807,7 +10837,8 @@ header.masthead .site-heading .site-title {
   color: #eae4cc;
 }
 header.masthead .site-heading .wedding-subheading {
-  font-family: "Pinyon Script", cursive;
+  font-family: "Pinyon Script", "Great Vibes", cursive;
+  font-weight: 400;
   font-size: clamp(2.75rem, 7vw, 5rem);
   color: #eae4cc;
 }
@@ -11365,7 +11396,7 @@ input[type="file"]::file-selector-button:hover {
 }
 .heading_brown {
     color: #7b5e36;
-    font-family: "Pinyon Script", cursive;
+    font-family: "Pinyon Script", "Great Vibes", cursive;
     font-size:4rem;
     font-weight: 400;
     margin-top: 4rem;
@@ -11432,18 +11463,24 @@ input[type="file"]::file-selector-button:hover {
     left: 0;
     top: 0;
     display: inline-block;
-    padding: 0.15rem 0.5rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 999px;
     background-color: #7b5e36;
     color: #eae4cc;
     font-size: 0.9rem;
+    line-height: 1;
+    min-width: 60px;
+    height: auto;
+    font-weight: 500;
     letter-spacing: 0;
     opacity: 0;
+    visibility: visible;
     transform: translate(-50%, -0.2rem);
     transition: opacity 0.2s ease, transform 0.2s ease;
     pointer-events: none;
     z-index: 1000;
     white-space: nowrap;
+    text-align: center;
 }
 
 .copy-feedback.is-visible {
@@ -11504,8 +11541,12 @@ input[type="file"]::file-selector-button:hover {
 .about-banner {
   width: 100%;
   background-color: #8d6f40;
-  padding: 2.5rem 1.5rem 3rem;
+  padding: 2.5rem 1.5rem 0rem;
   scroll-margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .anchor-target {
@@ -11537,6 +11578,7 @@ input[type="file"]::file-selector-button:hover {
 
 .about-banner-footer {
   width: 100%;
+  margin-top: auto;
   aspect-ratio: 1440 / 220;
   background-color: #8d6f40;
   background-image: url("../assets/img/about_background.png");
@@ -11545,9 +11587,20 @@ input[type="file"]::file-selector-button:hover {
   background-size: cover;
 }
 
+.about-banner__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
 @media (max-width: 767.98px) {
   .about-banner {
-    padding: 2rem 1rem 2.25rem;
+    padding: 2rem 1rem 0;
+    min-height: auto;
   }
 
   .about-banner__title {
@@ -11558,6 +11611,15 @@ input[type="file"]::file-selector-button:hover {
   .about-banner__text {
     max-width: 100%;
     line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+
+  .about-banner__image {
+    width: 100%;
+    margin-top: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 
   .about-banner-footer {
@@ -11576,11 +11638,11 @@ input[type="file"]::file-selector-button:hover {
     color: #7b5e36 !important;
     font-family: "Cormorant Garamond", serif !important;
     font-size: clamp(4rem, 6vw, 5rem);
-    font-weight: 100;
+    font-weight: 300;
     padding-top: 2rem;
     padding-left: clamp(1.25rem, 10vw, 12rem);
     padding-right: clamp(1.25rem, 10vw, 12rem);
-    transform: scaleY(1.4);
+    transform: scaleY(1.2);
     display: inline-block;
 }
 
@@ -11611,7 +11673,7 @@ input[type="file"]::file-selector-button:hover {
 
 .note {
     color: #7b5e36;
-    font-family: "Pinyon Script", cursive;
+    font-family: "Pinyon Script", "Great Vibes", cursive;
     font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 400;
     line-height: 1.1;
@@ -11634,10 +11696,10 @@ input[type="file"]::file-selector-button:hover {
 
 .qa-question {
     text-align: center;
-    font-family: "Pinyon Script", cursive;
+    font-family: "Pinyon Script", "Great Vibes", cursive;
     font-size: 2.5rem;
     color: #eae4cc;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
     padding-top: 0rem;
 }
@@ -11768,7 +11830,6 @@ input[type="file"]::file-selector-button:hover {
 .site-ready .home-feature__image,
 .site-ready .bauble,
 .site-ready .square,
-.site-ready .arch-size,
 .site-ready .map-wrap,
 .site-ready .more-banner {
   transition: transform 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease;
@@ -11777,7 +11838,6 @@ input[type="file"]::file-selector-button:hover {
 .site-ready .home-feature__image:hover,
 .site-ready .bauble:hover,
 .site-ready .square:hover,
-.site-ready .arch-size:hover,
 .site-ready .map-wrap:hover,
 .site-ready .more-banner:hover {
   transform: translateY(-0.35rem);
@@ -11811,6 +11871,66 @@ input[type="file"]::file-selector-button:hover {
 .site-ready .contact-icon:hover {
   transform: translateY(-0.2rem) scale(1.04);
 }
+
+.nav-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* Mobile language form - only visible on mobile, appears inside navbar menu */
+.navbar-language-form {
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(234, 228, 204, 0.1);
+  margin-top: 1rem;
+}
+
+/* Desktop language form - positioned on the right */
+.navbar-language-form-desktop {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Show desktop form and hide mobile form on desktop */
+@media (min-width: 992px) {
+  .navbar-language-form {
+    display: none !important;
+  }
+
+  .navbar-language-form-desktop {
+    display: flex !important;
+  }
+}
+
+.nav-language__button {
+  min-width: 3.5rem;
+  border: 1px solid rgba(234, 228, 204, 0.45);
+  border-radius: 999px;
+  background-color: transparent;
+  color: #eae4cc;
+  padding: 0.55rem 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav-language__button:hover,
+.nav-language__button:focus {
+  background-color: rgba(234, 228, 204, 0.12);
+  color: #eae4cc;
+}
+
 
 @keyframes driftGlow {
   0%, 100% {
