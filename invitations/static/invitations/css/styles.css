@@ -11257,7 +11257,7 @@ header.masthead .post-heading .meta a {
 }
 
 .questions-title {
-  letter-spacing: -0.08em;
+  letter-spacing: -0.03em;
 }
 .home-cta {
   width: 100%;
@@ -11834,9 +11834,38 @@ section {
   .header_brown {
     font-size: clamp(2.3rem, 9vw, 3.4rem);
     line-height: 1;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    transform: none;
+    width: fit-content;
+    max-width: calc(100% - 1.5rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
     text-align: center;
+    text-wrap: balance;
+  }
+
+  header.masthead .site-heading {
+    margin-top: 1.5rem;
+    overflow-x: hidden;
+  }
+
+  header.masthead .site-heading .site-title {
+    font-size: clamp(3.2rem, 13vw, 5rem);
+    line-height: 0.95;
+    word-break: break-word;
+  }
+
+  header.masthead .site-heading .wedding-subheading {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1;
+  }
+
+  header.masthead > .container,
+  header.masthead .row,
+  header.masthead [class*="col-"] {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .bauble-row {
@@ -11868,6 +11897,7 @@ section {
   .home-feature__heading {
     padding-right: clamp(4rem, 16vw, 6rem);
     max-width: 100%;
+    overflow: hidden;
   }
 
   .home-feature__rings {
@@ -11890,7 +11920,7 @@ section {
   }
 
   .questions-title {
-    letter-spacing: -0.04em;
+    letter-spacing: -0.01em;
   }
 
   .qa {

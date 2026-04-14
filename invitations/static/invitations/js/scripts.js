@@ -8,7 +8,21 @@ window.addEventListener('DOMContentLoaded', () => {
     const navbarCollapse = document.getElementById('navbarResponsive');
     const dropdownToggles = mainNav.querySelectorAll('.dropdown-toggle');
     const desktopBreakpoint = window.matchMedia('(min-width: 992px)');
+    const mobileBreakpoint = window.matchMedia('(max-width: 767.98px)');
     const pendingHashStorageKey = 'pendingScrollHash';
+
+    const lockHorizontalScroll = () => {
+        if (!mobileBreakpoint.matches) {
+            return;
+        }
+
+        if (window.scrollX !== 0) {
+            window.scrollTo(0, window.scrollY);
+        }
+
+        document.documentElement.scrollLeft = 0;
+        document.body.scrollLeft = 0;
+    };
 
     const syncDropdownState = () => {
         const hasOpenDropdown = mainNav.querySelector('.dropdown-menu.show') !== null;
@@ -154,6 +168,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     syncDropdownState();
+    lockHorizontalScroll();
     const pendingScrollTarget = window.sessionStorage.getItem('pendingScrollTarget');
     if (pendingScrollTarget) {
         const runPendingScroll = () => scrollToRsvpTarget(pendingScrollTarget);
@@ -177,6 +192,10 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('hashchange', () => {
         scrollToHashTarget(window.location.hash);
     });
+
+    window.addEventListener('scroll', lockHorizontalScroll, { passive: true });
+    window.addEventListener('resize', lockHorizontalScroll);
+    window.addEventListener('touchend', lockHorizontalScroll, { passive: true });
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const animatedNodes = document.querySelectorAll('[data-animate]');
