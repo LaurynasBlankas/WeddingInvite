@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 {% block content %}
+<style>
+    * {
+        overflow-x: hidden !important;
+    }
+</style>
 <section class="timer-bar" aria-label="{% trans 'Wedding countdown' %}" data-countdown-target="2027-05-21T00:00:00+03:00">
     <div class="timer-bar__inner">
         <p class="timer-bar__title" data-animate="slide-left">{% trans "Countdown to wedding" %}</p>
