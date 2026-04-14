@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WeddingInvite\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-01 21:59+0300\n"
-"PO-Revision-Date: 2026-04-01 22:00+0300\n"
+"POT-Creation-Date: 2026-04-14 15:29+0300\n"
+"PO-Revision-Date: 2026-04-14 15:29+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -14,7 +14,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.8\n"
 
-#: .\invitations\templates\RSVP.html:10 .\invitations\templates\navbar.html:19
+#: .\invitations\templates\RSVP.html:10
 msgid "RSVP"
 msgstr "RSVP"
 
@@ -93,39 +93,39 @@ msgid "Note from Darry:"
 msgstr "Примітка від Даррі:"
 
 #: .\invitations\templates\about.html:40
-msgid "INSPO FOR THE GENTLEMEN"
+msgid "INSPO FOR THE GENTS"
 msgstr "ІДЕЇ ДЛЯ ЧОЛОВІКІВ"
 
-#: .\invitations\templates\about.html:60 .\invitations\templates\home.html:55
+#: .\invitations\templates\about.html:60 .\invitations\templates\home.html:63
 msgid "THE CEREMONY"
 msgstr "ЦЕРЕМОНІЯ"
 
-#: .\invitations\templates\about.html:64 .\invitations\templates\home.html:59
+#: .\invitations\templates\about.html:64 .\invitations\templates\home.html:67
 msgid "Wedding ceremony image"
 msgstr "Зображення церемонії"
 
-#: .\invitations\templates\about.html:68 .\invitations\templates\home.html:63
+#: .\invitations\templates\about.html:68 .\invitations\templates\home.html:71
 msgid "Date and Time"
 msgstr "Дата і час"
 
 #: .\invitations\templates\about.html:69 .\invitations\templates\about.html:85
-#: .\invitations\templates\home.html:64
+#: .\invitations\templates\home.html:72
 msgid "May 21, 2027"
 msgstr "21 травня 2027"
 
-#: .\invitations\templates\about.html:70 .\invitations\templates\home.html:65
+#: .\invitations\templates\about.html:70 .\invitations\templates\home.html:73
 msgid "14:00 in the afternoon"
 msgstr "14:00 дня"
 
-#: .\invitations\templates\about.html:71 .\invitations\templates\home.html:66
+#: .\invitations\templates\about.html:71 .\invitations\templates\home.html:74
 msgid "Venue"
 msgstr "Місце"
 
-#: .\invitations\templates\about.html:72 .\invitations\templates\home.html:67
+#: .\invitations\templates\about.html:72 .\invitations\templates\home.html:75
 msgid "Vilniaus universiteto botanikos sodas"
 msgstr "Ботанічний сад Вільнюського університету"
 
-#: .\invitations\templates\about.html:74 .\invitations\templates\home.html:68
+#: .\invitations\templates\about.html:74 .\invitations\templates\home.html:76
 msgid "Kairenu g. 43"
 msgstr "Kairenu g. 43"
 
@@ -181,35 +181,39 @@ msgstr "Зображення проживання"
 msgid "9 Medai, Padukstai, 21367 Lithuania"
 msgstr "9 Medai, Padukstai, 21367 Литва"
 
-#: .\invitations\templates\about.html:144
+#: .\invitations\templates\about.html:130
+msgid "Copy address"
+msgstr ""
+
+#: .\invitations\templates\about.html:153
 msgid "What should I take?"
 msgstr "Що мені взяти з собою?"
 
-#: .\invitations\templates\about.html:146
+#: .\invitations\templates\about.html:155
 msgid "Can we take photos during the wedding?"
 msgstr "Чи можна фотографувати під час весілля?"
 
-#: .\invitations\templates\about.html:148
+#: .\invitations\templates\about.html:157
 msgid "Kids?"
 msgstr "Діти?"
 
-#: .\invitations\templates\about.html:155 .\invitations\templates\home.html:75
+#: .\invitations\templates\about.html:164 .\invitations\templates\home.html:83
 msgid "QUESTIONS ?"
 msgstr "Є питання?"
 
-#: .\invitations\templates\about.html:159 .\invitations\templates\home.html:79
+#: .\invitations\templates\about.html:168 .\invitations\templates\home.html:87
 msgid "Contact us"
 msgstr "Зв'яжіться з нами"
 
-#: .\invitations\templates\about.html:160 .\invitations\templates\home.html:80
+#: .\invitations\templates\about.html:169 .\invitations\templates\home.html:88
 msgid "Email"
 msgstr "Ел. пошта"
 
-#: .\invitations\templates\about.html:162 .\invitations\templates\home.html:82
+#: .\invitations\templates\about.html:171 .\invitations\templates\home.html:90
 msgid "Social"
 msgstr "Соцмережі"
 
-#: .\invitations\templates\about.html:170 .\invitations\templates\home.html:89
+#: .\invitations\templates\about.html:179 .\invitations\templates\home.html:97
 msgid "Contact photo"
 msgstr "Контактне фото"
 
@@ -221,51 +225,51 @@ msgstr "Весільне запрошення"
 msgid "are getting married"
 msgstr "одружуються"
 
-#: .\invitations\templates\home.html:4
+#: .\invitations\templates\home.html:12
 msgid "Wedding countdown"
 msgstr "Відлік до весілля"
 
-#: .\invitations\templates\home.html:6
+#: .\invitations\templates\home.html:14
 msgid "Countdown to wedding"
 msgstr "Відлік до весілля"
 
-#: .\invitations\templates\home.html:10
+#: .\invitations\templates\home.html:18
 msgid "Days"
 msgstr "Дні"
 
-#: .\invitations\templates\home.html:14
+#: .\invitations\templates\home.html:22
 msgid "Hours"
 msgstr "Години"
 
-#: .\invitations\templates\home.html:18
+#: .\invitations\templates\home.html:26
 msgid "Minutes"
 msgstr "Хвилини"
 
-#: .\invitations\templates\home.html:22
+#: .\invitations\templates\home.html:30
 msgid "Seconds"
 msgstr "Секунди"
 
-#: .\invitations\templates\home.html:32
+#: .\invitations\templates\home.html:40
 msgid "You are invited!"
 msgstr "Вас запрошено!"
 
-#: .\invitations\templates\home.html:33
+#: .\invitations\templates\home.html:41
 msgid "Wedding rings"
 msgstr "Весільні каблучки"
 
-#: .\invitations\templates\home.html:37
+#: .\invitations\templates\home.html:45
 msgid "Join us in celebrating our union"
 msgstr "Приєднайтесь до святкування нашого весілля"
 
-#: .\invitations\templates\home.html:40
+#: .\invitations\templates\home.html:48
 msgid "Wedding home feature image"
 msgstr "Головне фото весілля"
 
-#: .\invitations\templates\home.html:48
+#: .\invitations\templates\home.html:56
 msgid "Ready to celebrate with us?"
 msgstr "Готові святкувати разом з нами?"
 
-#: .\invitations\templates\home.html:49
+#: .\invitations\templates\home.html:57
 msgid "Let us know!"
 msgstr "Дайте нам знати!"
 
