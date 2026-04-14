@@ -694,61 +694,31 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-window.CopyButton = async function () {
-    const text = "9 Medai, Padukstai, 21367 Lithuania";
-    const feedback = document.getElementById("copy-feedback");
-    const icon = document.querySelector(".bi-clipboard-heart-fill");
-
-    if (!feedback) {
-        console.error("Feedback element not found!");
+window.CopyButton = async function (triggerElement) {
+    const trigger = triggerElement instanceof Element
+        ? triggerElement
+        : document.querySelector('[data-copy-text]');
+    if (!trigger) {
         return;
     }
 
-    const successLabel = "Copied";
-    const failLabel = "Failed";
+    const feedbackId = trigger.getAttribute('aria-controls');
+    const feedback = feedbackId ? document.getElementById(feedbackId) : null;
+    const text = trigger.dataset.copyText || '';
+    if (!feedback || !text) {
+        return;
+    }
 
-    const positionFeedback = () => {
-        if (!feedback || !icon) {
-            return;
-        }
-
-        const rect = icon.getBoundingClientRect();
-        feedback.style.left = `${rect.left + rect.width / 2}px`;
-        feedback.style.top = `${rect.bottom + 10}px`;
-    };
+    const successLabel = feedback.dataset.successLabel || 'Copied';
+    const failLabel = feedback.dataset.failLabel || 'Failed';
 
     const showFeedback = (message) => {
-        if (!feedback) {
-            return;
-        }
+        feedback.textContent = message;
+        feedback.classList.add('is-visible');
 
-        // Clear any existing content first
-        while (feedback.firstChild) {
-            feedback.removeChild(feedback.firstChild);
-        }
-
-        // Add text node
-        const textNode = document.createTextNode(message);
-        feedback.appendChild(textNode);
-
-        positionFeedback();
-
-        // Ensure visibility
-        feedback.style.visibility = 'visible';
-        feedback.style.opacity = '0';
-
-        // Trigger reflow to ensure changes are applied
-        void feedback.offsetHeight;
-
-        feedback.classList.add("is-visible");
-
-        window.addEventListener("scroll", positionFeedback, { passive: true });
-        window.addEventListener("resize", positionFeedback);
-        window.clearTimeout(window.copyFeedbackTimeout);
-        window.copyFeedbackTimeout = window.setTimeout(() => {
-            feedback.classList.remove("is-visible");
-            window.removeEventListener("scroll", positionFeedback);
-            window.removeEventListener("resize", positionFeedback);
+        window.clearTimeout(feedback.hideTimeout);
+        feedback.hideTimeout = window.setTimeout(() => {
+            feedback.classList.remove('is-visible');
         }, 1400);
     };
 
@@ -775,3 +745,11 @@ window.CopyButton = async function () {
         showFeedback(failLabel);
     }
 };
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-copy-text]').forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+            window.CopyButton(trigger);
+        });
+    });
+});

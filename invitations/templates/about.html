@@ -121,7 +121,16 @@
                          alt="{% trans 'Wedding accommodation image' %}" class="arch-size" data-animate-child>
                 </div>
                 <div class="program-list" data-stagger="fade-up">
-                    <p class="subheading_brown" style="text-align:center; font-size:1.5rem;" data-animate-child>{% trans "9 Medai, Padukstai, 21367 Lithuania" %} <i style="margin-left:2rem; cursor:pointer;" onclick="CopyButton()" role="button" class="bi bi-clipboard-heart-fill"></i></p>
+                    <p class="subheading_brown copy-address" style="text-align:center; font-size:1.5rem;" data-animate-child>{% trans "9 Medai, Padukstai, 21367 Lithuania" %}
+                        <button
+                                type="button"
+                                class="copy-trigger"
+                                data-copy-text="9 Medai, Padukstai, 21367 Lithuania"
+                                aria-controls="copy-feedback"
+                                aria-label="{% trans 'Copy address' %}">
+                            <i class="bi bi-clipboard-heart-fill" aria-hidden="true"></i>
+                        </button>
+                    </p>
                     <p class="copy-feedback-holder"><span id="copy-feedback" class="copy-feedback" aria-live="polite" data-success-label="Copied" data-fail-label="Failed"></span>
                     </p>
                     <div class="map-wrap" data-animate-child>

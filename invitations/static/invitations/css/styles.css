@@ -11189,6 +11189,7 @@ header.masthead .post-heading .meta a {
   width: 100%;
   background-color: #8d6f40;
   padding: clamp(2.5rem, 5vw, 5rem) 1.5rem;
+  overflow-x: hidden;
 }
 .home-feature__inner {
   width: min(100%, 75rem);
@@ -11197,6 +11198,9 @@ header.masthead .post-heading .meta a {
   grid-template-columns: minmax(0, 1fr) minmax(280px, 36rem);
   gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
+}
+.home-feature__inner > * {
+  min-width: 0;
 }
 .home-feature__copy {
   color: #f5efe2;
@@ -11241,6 +11245,7 @@ header.masthead .post-heading .meta a {
 }
 .home-feature__media {
   width: 100%;
+  min-width: 0;
 }
 .home-feature__image {
   width: 100%;
@@ -11251,7 +11256,7 @@ header.masthead .post-heading .meta a {
 }
 
 .questions-title {
-  letter-spacing: -0.2em;
+  letter-spacing: -0.08em;
 }
 .home-cta {
   width: 100%;
@@ -11465,15 +11470,15 @@ input[type="file"]::file-selector-button:hover {
 }
 
 .copy-feedback-holder {
-    margin: 0;
-    height: 0;
+    margin: 0.5rem 0 0;
+    min-height: 2.25rem;
+    text-align: center;
 }
 
 .copy-feedback {
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.5rem 0.75rem;
     border-radius: 999px;
     background-color: #7b5e36;
@@ -11485,9 +11490,9 @@ input[type="file"]::file-selector-button:hover {
     font-weight: 500;
     letter-spacing: 0;
     opacity: 0;
-    visibility: visible;
-    transform: translate(-50%, -0.2rem);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    visibility: hidden;
+    transform: translateY(-0.2rem);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
     pointer-events: none;
     z-index: 1000;
     white-space: nowrap;
@@ -11496,7 +11501,39 @@ input[type="file"]::file-selector-button:hover {
 
 .copy-feedback.is-visible {
     opacity: 1;
-    transform: translate(-50%, 0);
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.copy-address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.copy-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.copy-trigger:hover,
+.copy-trigger:focus {
+    color: #2b2012;
+}
+
+.copy-trigger:focus-visible {
+    outline: 2px solid #7b5e36;
+    outline-offset: 4px;
+    border-radius: 999px;
 }
 
 .arch-size {
@@ -11659,15 +11696,18 @@ input[type="file"]::file-selector-button:hover {
     max-width: 100%;
     margin: 0;
     overflow-wrap: anywhere;
+    word-break: break-word;
+    text-align: center;
 }
 
 .bauble {
-    width: clamp(12rem, 22vw, 10rem);
+    width: clamp(8.5rem, 22vw, 12rem);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     object-fit: cover;
     margin: clamp(0.5rem, 2vw, 1.25rem);
     flex-shrink: 0;
+    max-width: calc(100vw - 2rem);
 }
 
 .bauble-row {
@@ -11676,14 +11716,18 @@ input[type="file"]::file-selector-button:hover {
     align-items: center;
     flex-wrap: wrap;
     margin-top: 2rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .square {
-    width: clamp(22rem, 22vw, 10rem);
+    width: clamp(9rem, 28vw, 14rem);
     aspect-ratio: 1 / 1;
     object-fit: cover;
     margin: clamp(0.5rem, 2vw, 1.25rem);
     flex-shrink: 0;
+    max-width: calc(100vw - 2rem);
 }
 
 .note {
@@ -11738,14 +11782,54 @@ input[type="file"]::file-selector-button:hover {
 
 @media (max-width: 767.98px) {
   .header_brown {
-    font-size: clamp(2.6rem, 10vw, 4rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    font-size: clamp(2.3rem, 9vw, 3.4rem);
+    line-height: 1;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     text-align: center;
   }
 
+  .bauble-row {
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .bauble {
+    width: min(42vw, 10rem);
+    margin: 0.25rem;
+  }
+
+  .square {
+    width: min(43vw, 10.5rem);
+    margin: 0.25rem;
+  }
+
+  .home-feature {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .home-feature__inner {
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .home-feature__media {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .subheading_brown,
+  .program-label,
+  .program-item,
+  .note,
+  .qa-answer {
+    max-width: 100%;
+  }
+
   .questions-title {
-    letter-spacing: -0.08em;
+    letter-spacing: -0.04em;
   }
 
   .qa {
@@ -11760,6 +11844,21 @@ input[type="file"]::file-selector-button:hover {
 
   .more-banner {
     margin-bottom: 1rem;
+  }
+
+  [data-animate="slide-left"],
+  [data-animate-child][data-animate="slide-left"] {
+    transform: translate3d(-1.25rem, 0, 0);
+  }
+
+  [data-animate="slide-right"],
+  [data-animate-child][data-animate="slide-right"] {
+    transform: translate3d(1.25rem, 0, 0);
+  }
+
+  [data-animate="float-in"],
+  [data-animate-child][data-animate="float-in"] {
+    transform: translate3d(1rem, 0.75rem, 0) scale(0.94);
   }
 }
 
