@@ -10,6 +10,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const desktopBreakpoint = window.matchMedia('(min-width: 992px)');
     const mobileBreakpoint = window.matchMedia('(max-width: 767.98px)');
     const pendingHashStorageKey = 'pendingScrollHash';
+    let touchStartX = 0;
+    let touchStartY = 0;
 
     const lockHorizontalScroll = () => {
         if (!mobileBreakpoint.matches) {
@@ -196,6 +198,27 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', lockHorizontalScroll, { passive: true });
     window.addEventListener('resize', lockHorizontalScroll);
     window.addEventListener('touchend', lockHorizontalScroll, { passive: true });
+    window.addEventListener('touchstart', (event) => {
+        if (!mobileBreakpoint.matches || event.touches.length !== 1) {
+            return;
+        }
+
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (event) => {
+        if (!mobileBreakpoint.matches || event.touches.length !== 1) {
+            return;
+        }
+
+        const deltaX = Math.abs(event.touches[0].clientX - touchStartX);
+        const deltaY = Math.abs(event.touches[0].clientY - touchStartY);
+
+        if (deltaX > deltaY && deltaX > 6) {
+            event.preventDefault();
+        }
+    }, { passive: false });
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const animatedNodes = document.querySelectorAll('[data-animate]');

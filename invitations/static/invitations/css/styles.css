@@ -108,7 +108,7 @@ html,
 body {
   max-width: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   overscroll-behavior-x: none;
 }
 
@@ -11781,7 +11781,7 @@ input[type="file"]::file-selector-button:hover {
   width: 100%;
   max-width: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 #mainNav,
@@ -11818,7 +11818,7 @@ section {
   section {
     width: 100%;
     max-width: 100vw;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .site-title,
