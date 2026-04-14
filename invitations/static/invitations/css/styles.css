@@ -11895,15 +11895,20 @@ section {
   }
 
   .home-feature__heading {
-    padding-right: clamp(4rem, 16vw, 6rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
     max-width: 100%;
     overflow: hidden;
   }
 
   .home-feature__rings {
-    width: min(68vw, 18rem);
-    right: -0.5rem;
-    transform: translate(0, -50%);
+    position: static;
+    width: min(68vw, 16rem);
+    max-width: 100%;
+    margin: 0.75rem auto 0;
+    transform: none;
   }
 
   .home-feature__media {
