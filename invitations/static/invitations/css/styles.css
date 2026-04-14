@@ -107,6 +107,7 @@ body {
 html,
 body {
   max-width: 100%;
+  width: 100%;
   overflow-x: hidden;
   overscroll-behavior-x: none;
 }
@@ -11777,10 +11778,59 @@ input[type="file"]::file-selector-button:hover {
 }
 
 .site-shell {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
   overflow-x: hidden;
 }
 
+#mainNav,
+#mainNav .container,
+#navbarResponsive,
+.masthead,
+.about-banner,
+.timer-bar,
+.home-cta,
+.home-feature,
+.photo-banner,
+.rsvp-questions,
+section {
+  max-width: 100%;
+}
+
 @media (max-width: 767.98px) {
+  html,
+  body,
+  .site-shell {
+    touch-action: pan-y;
+  }
+
+  #mainNav,
+  #mainNav .container,
+  #navbarResponsive,
+  .masthead,
+  .about-banner,
+  .timer-bar,
+  .home-cta,
+  .home-feature,
+  .photo-banner,
+  .rsvp-questions,
+  section {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .site-title,
+  .subheading,
+  .wedding-subheading,
+  .about-banner__inner,
+  .rsvp-questions__intro,
+  .timer-bar__inner,
+  .home-cta__inner {
+    max-width: 100%;
+  }
+
   .header_brown {
     font-size: clamp(2.3rem, 9vw, 3.4rem);
     line-height: 1;
@@ -11813,6 +11863,17 @@ input[type="file"]::file-selector-button:hover {
   .home-feature__inner {
     width: 100%;
     gap: 1.5rem;
+  }
+
+  .home-feature__heading {
+    padding-right: clamp(4rem, 16vw, 6rem);
+    max-width: 100%;
+  }
+
+  .home-feature__rings {
+    width: min(68vw, 18rem);
+    right: -0.5rem;
+    transform: translate(0, -50%);
   }
 
   .home-feature__media {
@@ -11859,6 +11920,13 @@ input[type="file"]::file-selector-button:hover {
   [data-animate="float-in"],
   [data-animate-child][data-animate="float-in"] {
     transform: translate3d(1rem, 0.75rem, 0) scale(0.94);
+  }
+
+  .masthead::after {
+    width: 20rem;
+    height: 20rem;
+    top: -5rem;
+    right: -4rem;
   }
 }
 
